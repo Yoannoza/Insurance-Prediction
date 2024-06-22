@@ -52,31 +52,39 @@ button = st.button("Prédire", use_container_width=True)
 
 
 if button:
-    input_data = {
-    "age": age,
+    with st.spinner('Calculating...'):
+        
+        if sex == "Masculin":
+            sex =  0
+        else:
+            sex =  1
 
-    if sex == "Masculin":
-        "sex": 0
-    else:
-        "sex": 1
 
-    "bmi": bmi,
+        if smoker == "Oui":
+            smoker = 0
+        else:
+            smoker = 1
 
-    "children": children,
+        
+        input_data = {
+        "age": age,
 
-    "region": region.lower(),
+        "sex" : sex,
 
-    if smoker == "Oui":
-        "smoker": 0
-    else:
-        "smoker": 1
-    }
-    
-    input_df = pd.DataFrame([input_data])
+        "bmi": bmi,
 
-    prediction = model.predict(input_df).squeeze()
-    st.session_state['prediction'] = prediction
-    st.success("Done!")
+        "children": children,
+
+        "region": region.lower(),
+
+        "smoker" : smoker
+        }
+        
+        input_df = pd.DataFrame([input_data])
+
+        prediction = model.predict(input_df).squeeze()
+        st.session_state['prediction'] = prediction
+        st.success("Done!")
 
 if st.session_state['prediction']:
     pred = st.session_state['prediction']
