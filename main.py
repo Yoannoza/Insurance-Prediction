@@ -58,7 +58,7 @@ if button:
     if sex == "Masculin":
         "sex": 0
     else:
-        "sex": 1,
+        "sex": 1
 
     "bmi": bmi,
 
@@ -69,7 +69,7 @@ if button:
     if smoker == "Oui":
         "smoker": 0
     else:
-        "smoker": 1,
+        "smoker": 1
     }
     
     input_df = pd.DataFrame([input_data])
