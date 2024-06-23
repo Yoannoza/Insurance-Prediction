@@ -82,7 +82,7 @@ if button:
 
         "children": children,
 
-        "region": region.lower(),
+        "region": region,
 
         "smoker" : smoker
         }
