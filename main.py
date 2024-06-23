@@ -9,7 +9,7 @@ def load_model(filepath: str):
     with st.spinner('Loading model...'):
         return pickle.load(open(filepath, 'rb'))
 
-model = load_model('model/linear_reg_model.pkl')
+model = load_model('model/knn_model.pkl')
 
 _max_width_(70)
 st.title("Prediction des Primes d'Assurance Maladie")
@@ -64,6 +64,15 @@ if button:
             smoker = 0
         else:
             smoker = 1
+
+        if region == "Southeast":
+            region = 0
+        elif region == "Northeast":
+            region = 1
+        elif region == "Southwest":
+            region = 2
+        else:
+            region = 3
 
         
         input_data = {
