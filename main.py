@@ -10,7 +10,6 @@ def load_model(filepath: str):
 
 model = load_model('models/knn_model.pkl')
 
-_max_width_(70)
 st.title("Prediction des Primes d'Assurance Maladie")
 
 st.markdown("""
