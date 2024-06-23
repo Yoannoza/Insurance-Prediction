@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import pickle
-from sklearn.metrics import EuclideanDistance
 st.set_page_config(page_title="Insurance Primes Prediction")
 
 @st.cache_resource
