@@ -9,7 +9,7 @@ def load_model(filepath: str):
     with st.spinner('Loading model...'):
         return pickle.load(open(filepath, 'rb'))
 
-model = load_model('model/knn_model.pkl')
+model = load_model('models/knn_model.pkl')
 
 _max_width_(70)
 st.title("Prediction des Primes d'Assurance Maladie")
