@@ -82,16 +82,17 @@ if button:
 
         "children": children,
 
-        "region": region,
-
-        "smoker" : smoker
+        "smoker" : smoker,
+        
+        "region": region
         }
         
         input_df = pd.DataFrame([input_data])
 
         prediction = model.predict(input_df).squeeze()
-        st.session_state['prediction'] = prediction
-        st.success("Done!")
+        
+st.session_state['prediction'] = prediction
+st.success("Done!")
 
 if st.session_state['prediction']:
     pred = st.session_state['prediction']
