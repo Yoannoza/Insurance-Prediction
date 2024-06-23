@@ -47,6 +47,7 @@ with subcol2:
     )
 
 button = st.button("Prédire", use_container_width=True)
+st.session_state['prediction'] = False
 
 
 if button:
@@ -83,7 +84,7 @@ if button:
         "children": children,
 
         "smoker" : smoker,
-        
+
         "region": region
         }
         
@@ -91,8 +92,8 @@ if button:
 
         prediction = model.predict(input_df).squeeze()
         
-st.session_state['prediction'] = prediction
-st.success("Done!")
+        st.session_state['prediction'] = prediction
+        st.success("Done!")
 
 if st.session_state['prediction']:
     pred = st.session_state['prediction']
