@@ -101,6 +101,7 @@ if st.session_state['prediction']:
         """
     <style>
     [data-testid="stMetricValue"] {
+        padding: auto;
         font-size: 44px;
         font-weight: 700;
         color: green;
@@ -109,4 +110,4 @@ if st.session_state['prediction']:
     """,
         unsafe_allow_html=True,
     )
-    st.metric(label="Prime D'Assurance Maladie", value=f"$ {pred:.2f}")
+    st.metric(label="Prime D'Assurance Maladie", value=f"{pred:.2f} $")
