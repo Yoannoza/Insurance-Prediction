@@ -13,7 +13,7 @@ model = load_model('models/best_model.pkl')
 st.title("Prediction des Primes d'Assurance Maladie")
 
 st.markdown("""
-##### A web application for predicting Insurance Primes.
+##### Une application web pour prédire la prime d'assurance des clients.
 """)
 st.markdown("**:book: [Repo GitHub](https://github.com/matheuscamposmt/housing_prices_app)**")
 
