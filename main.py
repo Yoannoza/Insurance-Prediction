@@ -106,14 +106,8 @@ if button:
                 font-weight: 700;
                 color: green;
             }
-            .centered-metric {
-                display: flex;
-                justify-content: center;
-            }
             </style>
             """,
                 unsafe_allow_html=True,
             )
-            st.markdown('<div class="centered-metric">', unsafe_allow_html=True)
             st.metric(label="Prime D'Assurance Maladie", value=f"{pred:.2f} $")
-            st.markdown('</div>', unsafe_allow_html=True)
