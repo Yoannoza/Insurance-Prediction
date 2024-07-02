@@ -93,7 +93,6 @@ if button:
         prediction = model.predict(input_df).squeeze()
         
         st.session_state['prediction'] = prediction
-        st.success("Done!")
 
         if st.session_state['prediction']:
             pred = st.session_state['prediction']
@@ -110,4 +109,4 @@ if button:
             """,
                 unsafe_allow_html=True,
             )
-            st.metric(label="Prime D'Assurance Maladie", value=f"{pred:.2f} $")
+            st.success(f"Prime D'Assurance Maladie {pred:.2f} $")
