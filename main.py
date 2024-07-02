@@ -95,19 +95,19 @@ if button:
         st.session_state['prediction'] = prediction
         st.success("Done!")
 
-if st.session_state['prediction']:
-    pred = st.session_state['prediction']
-    st.markdown(
-        """
-    <style>
-    [data-testid="stMetricValue"] {
-        padding: auto;
-        font-size: 44px;
-        font-weight: 700;
-        color: green;
-    }
-    </style>
-    """,
-        unsafe_allow_html=True,
-    )
-    st.metric(label="Prime D'Assurance Maladie", value=f"{pred:.2f} $")
+        if st.session_state['prediction']:
+            pred = st.session_state['prediction']
+            st.markdown(
+                """
+            <style>
+            [data-testid="stMetricValue"] {
+                padding: auto;
+                font-size: 44px;
+                font-weight: 700;
+                color: green;
+            }
+            </style>
+            """,
+                unsafe_allow_html=True,
+            )
+            st.metric(label="Prime D'Assurance Maladie", value=f"{pred:.2f} $")
